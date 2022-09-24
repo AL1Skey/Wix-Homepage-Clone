@@ -1,0 +1,123 @@
+nav{
+	border-bottom: 1px solid #f3f3f3;
+	padding: 20px;
+
+	display: flex;
+	align-items: center;
+
+	height: 30px;
+
+	background-color: $light-color;
+	color: color-set($light-color);
+	font-size: 1rem;
+	
+	//COMMON PROPERTY FOR NAV-MAIN
+	.nav-main{
+
+		display: flex;
+		align-items: center;
+		
+		position: relative;
+		
+		.brand{
+			font-size: 1.6rem;
+		}
+
+		li{
+			padding: 5px 20px;
+
+		}
+	}
+
+	//COMMON PROPERTY FOR NAV-ASIDE
+	.nav-aside{
+		margin-left: auto;
+
+		display: flex;
+
+		position: relative;
+		z-index: 1;
+		li{
+			padding: 5px 20px;
+		}
+	}
+
+}
+
+//COMMON PROPERTY FOR SUB-NAV
+.sub-nav{
+	border: 1px solid #f3f3f3;
+	padding-top: 2rem;
+
+	width: auto;
+	height: 500px;
+
+	position: absolute;
+	top: 0;
+	left: 1;
+	z-index: -1;
+
+	.main-sub-nav{
+		padding: 2.8rem 0.8rem;
+		
+		display:grid;
+		grid-auto-flow: column;
+		grid-template-columns:repeat(auto,1fr);
+		grid-template-rows:repeat(4,1fr);
+
+		line-height: 1.6;
+	}
+	
+	.aside-sub-nav{
+		width: 600px;
+		
+		flex-direction: column;
+		line-height: 1.6;
+		background-color: #f3f3f3;
+
+		//top content
+		ul{
+			
+			padding: 2.8rem 1.2rem;
+		}
+
+		//bottom content
+		div{
+			
+			padding: 1rem 1.5rem;
+			
+			margin-top: 100px;
+			
+		}
+	}
+}
+
+//UTILITY
+.nav-dropdown{
+	border: none;
+	background-color: $light-color;
+	color: color-set($light-color);
+	font-size: 1rem;
+		&:hover{
+			color: blue;
+			cursor: pointer;
+		}
+}
+.sub-nav-link:hover{
+	p{
+		color: $dark-color !important;
+	}
+}
+
+.secondary-button{
+	border: 1px blue solid;
+	border-radius: 25px;
+	padding: 10px 35px;
+
+	color: blue;
+	background-color: inherit;
+	&:hover{
+		background-color: blue;
+		color: color-set(blue);
+	}
+}
